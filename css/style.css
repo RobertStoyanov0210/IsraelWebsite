@@ -1,0 +1,169 @@
+:root{
+  /* --showcase-color: rgba(3,57,108, 0.85); */
+  --showcase-color: rgba(51,51,51,0.4);
+  --primary-color: rgb(3,57,108);
+  --secondary-color: rgb(0,91,150);
+  --third-color: rgb(100,151,177);
+  --white-color: #f3f3f3;
+  --light-color: #e5e5e5;
+}
+/* Main style */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Comfortaa', cursive;
+  background-color: var(--white-color);
+}
+a{ 
+  text-decoration: none;
+  color: black; 
+}
+
+ul{ list-style-type: none; }
+
+
+/* Utility Classes */
+.container{
+  max-width: 960px;
+  margin: auto; 
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+.section{
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  border-bottom: 3px solid black;
+}
+
+.mini-section{
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  width: 50vw;
+  margin: 20px auto;
+  border-bottom: 1px dotted black;
+}
+
+.text-primary { color: var(--primary-color); }
+
+.btn{
+  padding: .6rem .85rem;
+  border-radius: 5px;
+  color: var(--light-color);
+  background-color: var(--primary-color);
+}
+
+.py-1{ padding: 0.5rem 0}
+.py-2{ padding: 1rem 0}
+.py-3{ padding: 2rem 0}
+.p-1{ padding: 0.5rem }
+.p-2{ padding: 1rem }
+.p-3{ padding: 2rem }
+
+
+/* Navigation Bar */
+nav{
+  display: flex;
+  position: sticky;
+  top:0;
+  justify-content: space-between;
+  background-color: var(--white-color);
+  z-index: 1;
+  padding: 1rem;
+}
+
+nav h1{
+  display: flex;
+  font-size: 2rem;
+}
+
+nav i{ margin-right: 8px; }
+nav img{ height: 40px; }
+
+nav ul{
+  display: flex;
+  text-align: center;
+}
+
+nav ul li{
+  
+  padding: .75rem;
+  margin: 0 0.25rem;
+  background-color: var(--light-color);
+  border-radius: 7px;
+}
+
+nav ul li a:hover,
+nav ul li{
+  color: var(--secondary-color);
+  transition: 0.4s;
+}
+
+.current-page{
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+}
+
+
+/* Background image style */
+#showcase:before{
+  content: '';
+  background: url('../img/israel_tree.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70vh;
+  z-index: -1;
+}
+
+
+/* Showcase text centered */
+#showcase{
+  background:var(--showcase-color);
+  color: white;
+  height: 70vh;
+  position: relative;
+}
+
+#showcase .showcase-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+#showcase h2{ margin-bottom: 2rem;}
+
+
+/* Main Section */
+main{
+  height: 100vh;
+  width: 85%;
+  margin: 0 auto;
+}
+
+
+/* Facts Section */
+
+/* Weather Section */
+#weather .weather-card {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  justify-items: center;
+}
+#weather .weather-card .weather-icon { font-size: 3rem; }
+
+/* Explore Section */
+#explore video{
+  width: 100%;
+}
