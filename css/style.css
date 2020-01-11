@@ -1,5 +1,4 @@
 :root{
-  /* --showcase-color: rgba(3,57,108, 0.85); */
   --showcase-color: rgba(51,51,51,0.4);
   --primary-color: rgb(3,57,108);
   --secondary-color: rgb(0,91,150);
@@ -171,47 +170,54 @@ main{
 
 /* TIMELINE */
 
-#timeline ul{
-  background-color: var(--primary-color);
+#timeline ul {
+  background: var(--primary-color);
   padding: 50px 0;
 }
 
 /* Create Line */
 #timeline ul li {
+  list-style: none;
   position: relative;
   width: 6px;
   margin: 0 auto;
   padding-top: 50px;
-  background-color: var(--white-color);
+  background: #fff;
 }
 
 /* Boxes */
-#timeline ul li div{
+#timeline ul li div {
   position: relative;
   bottom: 0;
   width: 400px;
   padding: 1rem;
-  background-color: var(--secondary-color);
+  background: var(--secondary-color);
   transition: all 0.5s ease-in-out;
-  /* visibility: hidden; */
-  /* opacity: 0; */
+  visibility: hidden;
+  opacity: 0;
+}
+#timeline ul li .israel-created{
+  border: 4px solid var(--third-color);
 }
 
-/* Move To The Right */
-#timeline ul li:nth-child(odd) div{
+/* Right Side */
+#timeline ul li:nth-child(odd) div {
   left: 40px;
   transform: translate(200px, 0);
 }
-/* Move To The Left */
-#timeline ul li:nth-child(even) div{
+
+/* Left Side */
+#timeline ul li:nth-child(even) div {
   left: -434px;
   transform: translate(-200px, 0);
 }
+
 /* Dots */
-#timeline ul li:after{
+#timeline ul li:after {
   content: '';
   position: absolute;
   left: 50%;
+  bottom: 0;
   width: 25px;
   height: 25px;
   background: inherit;
@@ -236,3 +242,53 @@ main{
   border-width: 8px 16px 8px 0;
   border-color: transparent var(--secondary-color) transparent transparent;
 }
+
+/* Left Side Arrows */
+#timeline ul li:nth-child(even) div:before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent var(--secondary-color);
+}
+
+/* Show Boxes */
+#timeline ul li.show div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+#timeline ul li.show:after {
+  background: var(--secondary-color);
+}
+
+
+@media(max-width: 900px) {
+  #timeline ul li div {
+    width: 250px;
+  }
+
+  #timeline ul li:nth-child(even) div {
+    left: -284px;
+  }
+}
+
+@media(max-width: 600px) {
+  #timeline ul li {
+    margin-left: 20px;
+  }
+
+  #timeline ul li div {
+    width: calc(100vw - 90px);
+  }
+
+  #timeline ul li:nth-child(even) div {
+    left: 40px;
+  }
+
+  #timeline ul li:nth-child(even) div:before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent var(--secondary-color) transparent transparent;
+  }
+}
+
