@@ -196,3 +196,43 @@ main{
   /* visibility: hidden; */
   /* opacity: 0; */
 }
+
+/* Move To The Right */
+#timeline ul li:nth-child(odd) div{
+  left: 40px;
+  transform: translate(200px, 0);
+}
+/* Move To The Left */
+#timeline ul li:nth-child(even) div{
+  left: -434px;
+  transform: translate(-200px, 0);
+}
+/* Dots */
+#timeline ul li:after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  background: inherit;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  transition: background 0.5s ease-in-out;
+}
+
+/* Arrows Base */
+#timeline div:before {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* Right Side Arrows */
+#timeline ul li:nth-child(odd) div:before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent var(--secondary-color) transparent transparent;
+}
