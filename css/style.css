@@ -68,7 +68,7 @@ ul{ list-style-type: none; }
 
 
 /* Navigation Bar */
-nav{
+#navbar{
   display: flex;
   position: sticky;
   top:0;
@@ -79,28 +79,28 @@ nav{
   
 }
 
-nav h1{
+#navbar h1{
   display: flex;
   font-size: 2rem;
 }
 
-nav i{ margin-right: 8px; }
-nav img{ height: 40px; }
+#navbar i{ margin-right: 8px; }
+#navbar img{ height: 40px; }
 
-nav ul{
+#navbar ul{
   display: flex;
   text-align: center;
 }
 
-nav ul li{
+#navbar ul li{
   padding: .75rem;
   margin: 0 0.25rem;
   background-color: var(--light-color);
   border-radius: 7px;
 }
 
-nav ul li a:hover,
-nav ul li{
+#navbar ul li a:hover,
+#navbar ul li{
   color: var(--secondary-color);
   transition: 0.4s;
 }

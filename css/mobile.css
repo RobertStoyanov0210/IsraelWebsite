@@ -3,13 +3,13 @@ body{
   font-size: 0.9rem;
 }
 
-nav{
+#navbar{
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1.2rem;
 }
 
-nav #logo, nav ul{ justify-self: center; }
+#navbar #logo, #navbar ul{ justify-self: center; }
 
 #weather .weather{ 
   display: grid;
