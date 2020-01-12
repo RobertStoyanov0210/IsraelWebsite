@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
 
   <!-- Favicon -->
@@ -12,6 +11,7 @@
   <script src="https://kit.fontawesome.com/eeb790f709.js" crossorigin="anonymous"></script>
   <!-- Links -->
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" media="screen and (max-width: 768px)" href="/css/mobile.css">
   
   <title>Israel | Home</title>
 </head>
@@ -60,25 +60,38 @@
     <section id="weather">
       <div class="container-section">
         <div class="section py-1">TODAY'S WEATHER</div>
-        <div class="weather-card py-1">
+        <div class="weather py-1">
 
-          <div class="weather-icon"><i class="fas fa-sun"></i></div>
-          <div class="weather-icon"><i class="fas fa-cloud-sun"></i></div>
-          <div class="weather-icon"><i class="fas fa-cloud-sun-rain"></i></div>
-          <div class="weather-icon"><i class="fas fa-cloud-sun"></i></div>
-          <div class="weather-icon"><i class="fas fa-cloud-sun"></i></div>
-  
-          <div>JERUSALM</div>
-          <div>TEL AVIV</div>
-          <div>EILAT</div>
-          <div>HAIFA</div>
-          <div>TIBERIAS</div>
+          <div class="jerusalem">
+            <div><i class="fas fa-sun fa-3x py-2"></i></div>
+            <div>JERUSALEM</div>
+            <div>37&#8451</div>
+          </div>
 
-          <div>37&#8451</div>
-          <div>34&#8451</div>
-          <div>26&#8451</div>
-          <div>31&#8451</div>
-          <div>30&#8451</div>
+          <div class="tel-aviv">
+            <div><i class="fas fa-cloud-sun fa-3x py-2"></i></div>
+            <div>TEL AVIV</div>
+            <div>34&#8451</div>
+          </div>
+
+          <div class="eliat">
+            <div><i class="fas fa-cloud-sun-rain fa-3x py-2"></i></div>
+            <div>EILAT</div>
+            <div>26&#8451</div>
+          </div>
+
+          <div class="haifa">
+            <div><i class="fas fa-cloud-sun fa-3x py-2"></i></div>
+            <div>HAIFA</div>
+            <div>31&#8451</div>
+          </div>
+
+          <div class="tiberias">
+            <div><i class="fas fa-cloud-sun fa-3x py-2"></i></div>
+            <div>TIBERIAS</div>
+            <div>30&#8451</div>
+          </div>
+          
         </div>
       </div>
     </section> 
@@ -86,8 +99,9 @@
     <section id="explore">
       <div class="container-section">
         <div class="section py-1">EXPLORE ISRAEL</div>
-        <video class="py-2"src="/img/Dead Sea - The Lowest Place On Earth.mp4" controls></video>
-
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/ixFocykfYHo" frameborder="0"  allowfullscreen></iframe>
+        </div>
       </div>
     </section>   
   </main>  

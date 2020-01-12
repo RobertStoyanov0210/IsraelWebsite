@@ -1,0 +1,21 @@
+body{
+  overflow-x: hidden;
+  font-size: 0.9rem;
+}
+
+nav{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.2rem;
+}
+
+nav #logo, nav ul{ justify-self: center; }
+
+#weather .weather{ 
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: 1fr min-content;
+  grid-template-areas: 
+    'jerusalem . tel-aviv . eliat'
+    '. haifa . tiberias .';
+}
