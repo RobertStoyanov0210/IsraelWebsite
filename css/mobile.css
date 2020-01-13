@@ -11,11 +11,25 @@ body{
 
 #navbar #logo, #navbar ul{ justify-self: center; }
 
+.mini-section{
+  font-size: 1.3rem;
+  width: 95%;
+}
 #weather .weather{ 
   display: grid;
-  grid-template-columns: repeat(5, auto);
-  grid-template-rows: 1fr min-content;
-  grid-template-areas: 
-    'jerusalem . tel-aviv . eliat'
-    '. haifa . tiberias .';
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "jerusalem . tel-aviv . eliat" ". haifa . tiberias .";
+  /* margin: 0 20px; */
+  font-size: 0.95rem;
 }
+
+.tel-aviv { grid-area: tel-aviv; }
+
+.jerusalem { grid-area: jerusalem; }
+
+.eliat { grid-area: eliat; }
+
+.haifa { grid-area: haifa; }
+
+.tiberias { grid-area: tiberias; }

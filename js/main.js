@@ -1,7 +1,7 @@
 window.addEventListener('scroll', function(){
   var navbar =  document.getElementById('navbar');
   var logo =  document.getElementById('logo');
-  if (window.scrollY > 150){
+  if (window.scrollY > 100){
       navbar.style.opacity = 0.9;
       if (window.innerWidth < 769){
       logo.style.position = "absolute";
