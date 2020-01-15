@@ -1,22 +1,23 @@
+// Home JS
 window.addEventListener('scroll', function(){
   var navbar =  document.getElementById('navbar');
   var logo =  document.getElementById('logo');
   if (window.scrollY > 100){
       navbar.style.opacity = 0.9;
       if (window.innerWidth < 769){
-      logo.style.position = "absolute";
-      logo.style.top = -100+'px';
-    }
+        logo.style.position = "absolute";
+        logo.style.top = -100+'px';
+      }
   } else {
       navbar.style.opacity = 1;
-      if (window.innerWidth < 769){
-      logo.style.position = 'sticky';
-      logo.style.top = 0+'px';
-    }
+      if(this.innerWidth < 769) {
+        logo.style.position = 'sticky';
+        logo.style.top = 0+'px';
+      }
   }
 });
 
-
+// Timeline JS
 const items = document.querySelectorAll('#timeline li');
 
 const isInViewport = el => {

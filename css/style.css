@@ -26,13 +26,6 @@ ul{ list-style-type: none; }
 
 
 /* Utility Classes */
-.container{
-  max-width: 960px;
-  margin: auto; 
-  overflow: hidden;
-  padding: 0 3rem;
-}
-
 .section{
   font-size: 1.5rem;
   display: flex;
@@ -50,6 +43,10 @@ ul{ list-style-type: none; }
   border-bottom: 1px dotted black;
 }
 
+.current-page{
+  color: var(--secondary-color);
+}
+
 .text-primary { color: var(--primary-color); }
 
 .btn{
@@ -57,10 +54,6 @@ ul{ list-style-type: none; }
   border-radius: 5px;
   color: var(--light-color);
   background-color: var(--primary-color);
-}
-.download-link{
-  font-size: 0.5rem;
-  color: red;
 }
 
 .py-1{ padding: 0.5rem 0}
@@ -77,17 +70,15 @@ ul{ list-style-type: none; }
   position: sticky;
   top:0;
   justify-content: space-between;
-  background-color: var(--white-color);
   z-index: 1;
+  background-color: var(--white-color);
   padding: 1rem;
-  
 }
-
-#navbar h1{
+/* Logo */
+#logo{
   display: flex;
   font-size: 2rem;
 }
-
 #navbar i{ margin-right: 8px; }
 #navbar img{ height: 40px; }
 
@@ -100,7 +91,6 @@ ul{ list-style-type: none; }
   margin: 0 0.25rem;
   background-color: var(--light-color);
   border-radius: 7px; 
-  text-align: center;
 }
 
 
@@ -108,10 +98,6 @@ ul{ list-style-type: none; }
 #navbar ul li{
   color: var(--secondary-color);
   transition: 0.4s;
-}
-
-.current-page{
-  color: var(--secondary-color);
 }
 
 
@@ -177,8 +163,7 @@ main{
 .video-container{
   position: relative;
   width: 100%;
-  padding-bottom: 50%;
-  margin-bottom: 20px;
+  padding-top: 50%;
 }
 .video-container iframe{
   position: absolute;
@@ -209,7 +194,7 @@ main{
 /* Boxes */
 #timeline ul li div {
   position: relative;
-  bottom: 0;
+  /* top: 0; */
   width: 400px;
   padding: 1rem;
   background: var(--secondary-color);
@@ -244,6 +229,7 @@ main{
   background: inherit;
   transform: translateX(-50%);
   border-radius: 50%;
+  /* Dots animation white -> blue */
   transition: background 0.5s ease-in-out;
 }
 
@@ -277,7 +263,7 @@ main{
   visibility: visible;
   opacity: 1;
 }
-
+/* When show class is on li, color changes to secondary-color */
 #timeline ul li.show:after {
   background: var(--secondary-color);
 }
@@ -287,17 +273,18 @@ main{
   #timeline ul li div {
     width: 250px;
   }
-
+  /* bug fixer */
   #timeline ul li:nth-child(even) div {
     left: -284px;
   }
 }
 
 @media(max-width: 600px) {
+  /* move arrow to the left*/
   #timeline ul li {
     margin-left: 20px;
   }
-
+  /* dynamic boxes */
   #timeline ul li div {
     width: calc(100vw - 90px);
   }
@@ -305,7 +292,7 @@ main{
   #timeline ul li:nth-child(even) div {
     left: 40px;
   }
-
+  /* change arrow */
   #timeline ul li:nth-child(even) div:before {
     left: -15px;
     border-width: 8px 16px 8px 0;
