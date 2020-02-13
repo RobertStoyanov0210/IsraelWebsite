@@ -20,7 +20,6 @@ body{
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "jerusalem . tel-aviv . eliat" ". haifa . tiberias .";
-  /* margin: 0 20px; */
   font-size: 0.95rem;
 }
 
